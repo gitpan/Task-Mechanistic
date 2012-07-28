@@ -1,0 +1,6 @@
+Revision history for Perl extension Task::Mechanistic.
+
+0.01  Sat Jul 28 09:28:00 2012
+	- original version; created by h2xs 1.23 with options
+		-ABX -b 5.5.0 -n Task::Mechanistic
+
