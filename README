@@ -1,4 +1,4 @@
-Task-Mechanistic version 0.01
+Task-Mechanistic version 0.02
 ================================
 
 INSTALLATION
@@ -18,10 +18,10 @@ This module requires these other modules and libraries:
 
 COPYRIGHT AND LICENSE
 
-Copyright (C) 2012 by Kevin W. Henwood
+Copyright (C) 2013 by Kevin W. Henwood
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.005 or,
-at your option, any later version of Perl 5 you may have available.
+it under the same terms as Perl itself, or at your option, 
+any later version of Perl 5 you may have available.
 
 
