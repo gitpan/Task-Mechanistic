@@ -1,5 +1,5 @@
 ---
-abstract: 'Perl extension to install WWW::Mechanize'
+abstract: 'Installs WWW::Mechanize with dependencies'
 author:
   - 'Kevin W. Henwood <Khen1950fx@yahoo.com>'
 build_requires:
@@ -9,7 +9,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.36
 distribution_type: module
 dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+generated_by: 'Module::Install version 1.08'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -30,9 +30,9 @@ requires:
   Attribute::Handlers: 0
   AutoLoader: 0
   B::Hooks::EndOfScope: 0
+  B::Hooks::OP::Check: 0
   B::Keywords: 0
   CGI: 0
-  CPAN::Changes: 0
   CPAN::DistnameInfo: 0
   CPAN::Meta: 0
   CPAN::Meta::Requirements: 0
@@ -65,16 +65,17 @@ requires:
   DateTime::Format::W3CDTF: 0
   DateTime::Locale: 0
   DateTime::TimeZone: 0
+  Devel::Declare: 0
   Devel::GlobalDestruction: 0
-  Devel::InnerPackage: 0
   Devel::PPPort: 0
   Devel::StackTrace: 0
   Devel::Symdump: 0
+  Digest: 0
   Digest::MD5: 0
   Digest::SHA: 0
-  Digest::base: 0
   Dist::CheckConflicts: 0
   Email::Address: 0
+  Email::Date::Format: 0
   Email::MIME::ContentType: 0
   Email::MIME::Encodings: 0
   Email::MIME::Header: 0
@@ -87,16 +88,21 @@ requires:
   Exception::Class: 0
   Exporter: 0
   ExtUtils::CBuilder: 0
+  ExtUtils::Config: 0
   ExtUtils::Constant: 0
   ExtUtils::Depends: 0
+  ExtUtils::Helpers: 0
   ExtUtils::Install: 0
-  ExtUtils::Installed: 0
+  ExtUtils::InstallPaths: 0
   ExtUtils::MakeMaker: 0
+  ExtUtils::MakeMaker::CPANfile: 0
   ExtUtils::Manifest: 0
   ExtUtils::ParseXS: 0
   ExtUtils::PkgConfig: 0
   ExtUtils::Typemaps: 0
   FCGI: 0
+  File::BaseDir: 0
+  File::DesktopEntry: 0
   File::Find::Iterator: 0
   File::Find::Object: 0
   File::Find::Object::Rule: 0
@@ -106,6 +112,7 @@ requires:
   File::HomeDir: 0
   File::Listing: 0
   File::MMagic: 0
+  File::MimeInfo: 0
   File::Path: 0
   File::ReadBackwards: 0
   File::Remove: 0
@@ -113,13 +120,13 @@ requires:
   File::ShareDir::Install: 0
   File::ShareDir::ProjectDistDir: 0
   File::Slurp: 0
+  File::Slurp::Tiny: 0
   File::Spec: 0
   File::Temp: 0
   File::Which: 0
   Filter::Util::Call: 0
   FreezeThaw: 0
   Getopt::Long: 0
-  HTML::Entities: 0
   HTML::Form: 0
   HTML::Parser: 0
   HTML::Tagset: 0
@@ -139,6 +146,7 @@ requires:
   IO::HTML: 0
   IO::Handle: 0
   IO::Pty: 0
+  IO::Seekable: 0
   IO::Socket::IP: 0
   IO::Socket::SSL: 0
   IO::String: 0
@@ -152,9 +160,7 @@ requires:
   JSON::XS: 0
   LWP: 0
   LWP::MediaTypes: 0
-  LWP::Protocol::http: 0
   LWP::Protocol::https: 0
-  LWP::Simple: 0
   LWP::UserAgent: 0
   Lingua::EN::Inflect: 0
   Lingua::EN::Numbers: 0
@@ -175,6 +181,7 @@ requires:
   Module::Build::Tiny: 0
   Module::CPANTS::Analyse: 0
   Module::CPANTS::Kwalitee: 0
+  Module::CPANfile: 0
   Module::CoreList: 0
   Module::ExtractUse: 0
   Module::Find: 0
@@ -186,7 +193,8 @@ requires:
   Module::Pluggable: 0
   Module::Runtime: 0
   Module::Signature: 0
-  Moose: 0
+  Moose::Role: 0
+  Moose::Util::TypeConstraints: 0
   MooseX::StrictConstructor: 0
   Mozilla::CA: 0
   Net::FTP: 0
@@ -214,18 +222,18 @@ requires:
   Perl::MinimumVersion: 0
   Perl::OSType: 0
   Perl::Tidy: 0
+  PerlIO::utf8_strict: 0
+  Pod::Checker: 0
   Pod::Coverage: 0
-  Pod::Coverage::CountParents: 0
   Pod::Coverage::TrustPod: 0
   Pod::Escapes: 0
   Pod::Eventual: 0
+  Pod::Eventual::Simple: 0
   Pod::Man: 0
   Pod::Parser: 0
   Pod::Simple: 0
   Pod::Spell: 0
-  Pod::Strip: 0
   Pod::Usage: 0
-  Pod::Wordlist: 0
   Pod::Wordlist::hanekomu: 0
   Probe::Perl: 0
   Readonly: 0
@@ -241,8 +249,10 @@ requires:
   Sub::Install: 0
   Sub::Name: 0
   Sub::Uplevel: 0
+  TAP::Harness::Env: 0
   Task::Weaken: 0
   Term::ANSIColor: 0
+  Test: 0
   Test::CPAN::Changes: 0
   Test::CPAN::Meta: 0
   Test::CPAN::Meta::JSON: 0
@@ -284,6 +294,7 @@ requires:
   Test::Vars: 0
   Test::Version: 0
   Test::Warn: 0
+  Test::Warnings: 0
   Text::Abbrev: 0
   Text::Aligner: 0
   Text::Autoformat: 0
@@ -291,6 +302,7 @@ requires:
   Text::Diff: 0
   Text::Glob: 0
   Text::ParseWords: 0
+  Text::Reform: 0
   Text::Sprintf::Named: 0
   Text::Table: 0
   Text::Template: 0
@@ -304,8 +316,9 @@ requires:
   Types::Serialiser: 0
   UNIVERSAL::isa: 0
   UNIVERSAL::require: 0
-  URI::Escape: 0
+  URI: 0
   Unicode::CheckUTF8: 0
+  Unicode::UTF8: 0
   Version::Requirements: 0
   WWW::Mechanize: 0
   WWW::RobotRules: 0
@@ -325,10 +338,10 @@ requires:
   namespace::autoclean: 0
   namespace::clean: 0
   parent: 0
-  perl: 5.005
+  perl: '5.005'
   threads: 0
   threads::shared: 0
   version: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.03
+version: '0.04'
